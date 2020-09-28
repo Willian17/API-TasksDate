@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import helloRouter from './hello';
+import tasksRouter from './tasks.routes';
 
 const routes = Router();
 
-routes.use('/', helloRouter);
+routes.use('/tasks', tasksRouter);
 
 export default routes;
