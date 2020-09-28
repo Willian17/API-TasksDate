@@ -14,16 +14,13 @@ describe('Transaction', () => {
   beforeAll(async () => {
     connection = await createConnection('test-connection');
     
-    await connection.query('DROP TABLE IF EXISTS transactions');
-    await connection.query('DROP TABLE IF EXISTS categories');
-    await connection.query('DROP TABLE IF EXISTS migrations');
+    await connection.query('DROP TABLE IF EXISTS tasks');
     
     await connection.runMigrations();
   });
 
   beforeEach(async () => {
-    await connection.query('DELETE FROM transactions');
-    await connection.query('DELETE FROM categories');
+    await connection.query('DELETE FROM tasks');
   });
 
   afterAll(async () => {
