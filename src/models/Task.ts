@@ -1,4 +1,4 @@
-import { Entity ,PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm'
+import { Entity ,PrimaryGeneratedColumn, Column } from 'typeorm'
 
 @Entity('tasks')
 class Task {
@@ -8,7 +8,7 @@ class Task {
     @Column()
     title: string
 
-    @CreateDateColumn()
+    @Column('timestamp')
     deliverydate: Date
 
     @Column()

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import CreateTaskService from '../services/CreateTaskService';
-import { getRepository } from 'typeorm'
+import { Any, getRepository } from 'typeorm'
 import Task from '../models/Task';
 
 
@@ -26,6 +26,7 @@ tasksRouter.post('/', async (request, response) => {
 
 tasksRouter.get('/', async (request, response) =>{
   const taskRepository = getRepository(Task)
+  
   const tasks = await taskRepository.find()
 
   return response.json(tasks)

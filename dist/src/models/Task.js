@@ -22,7 +22,7 @@ var Task = /** @class */ (function () {
         __metadata("design:type", String)
     ], Task.prototype, "title", void 0);
     __decorate([
-        typeorm_1.CreateDateColumn(),
+        typeorm_1.Column('timestamp'),
         __metadata("design:type", Date)
     ], Task.prototype, "deliverydate", void 0);
     __decorate([
