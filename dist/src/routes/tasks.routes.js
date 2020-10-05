@@ -76,6 +76,9 @@ tasksRouter.get('/', function (request, response) { return __awaiter(void 0, voi
                 return [4 /*yield*/, taskRepository.find()];
             case 1:
                 tasks = _a.sent();
+                tasks.forEach(function (task) {
+                    task.deliverydate = task.deliverydate.toLocaleString();
+                });
                 return [2 /*return*/, response.json(tasks)];
         }
     });

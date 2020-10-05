@@ -9,7 +9,7 @@ class Task {
     title: string
 
     @Column('timestamp')
-    deliverydate: string
+    deliverydate: Date | string
 
     @Column()
     subject: string
