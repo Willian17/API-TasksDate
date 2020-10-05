@@ -29,6 +29,10 @@ tasksRouter.get('/', async (request, response) =>{
   
   const tasks = await taskRepository.find()
 
+  tasks.forEach(task => {
+    task.deliverydate = task.deliverydate.toLocaleString();
+  })
+
   return response.json(tasks)
 })
 
