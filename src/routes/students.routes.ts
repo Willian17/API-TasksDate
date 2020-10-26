@@ -38,7 +38,7 @@ studentsRouter.post('/signin', async (request, response)=> {
 
        return response.json({token, user})
     } catch (error) {
-        return response.status(400).json({ Error: error.message });
+        return response.status(400).json({ error: error.message });
     }
 })
 
