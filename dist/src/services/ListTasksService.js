@@ -60,6 +60,7 @@ var ListTasksService = /** @class */ (function () {
                         return [4 /*yield*/, studentRepository.findOne({ where: { id: student_id } })];
                     case 1:
                         student = _b.sent();
+                        console.log("student.id service " + (student === null || student === void 0 ? void 0 : student.id));
                         if (!student) {
                             throw new AppError_1.default('Id do usuário logado inválido', 500);
                         }
@@ -88,7 +89,9 @@ var ListTasksService = /** @class */ (function () {
                     case 5:
                         index++;
                         return [3 /*break*/, 3];
-                    case 6: return [2 /*return*/, tasksInSameClass];
+                    case 6:
+                        console.log("tasks in same class " + tasksInSameClass);
+                        return [2 /*return*/, tasksInSameClass];
                 }
             });
         });

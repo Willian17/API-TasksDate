@@ -26,6 +26,8 @@ class ListTasksService{
         
         const student =  await studentRepository.findOne({where: {id: student_id}})
 
+        console.log(`student.id service ${student?.id}`)
+
         if(!student){
             throw new AppError('Id do usuário logado inválido', 500)
         }
@@ -47,6 +49,8 @@ class ListTasksService{
 
         tasksInSameClass[index].deliverydate = tasksInSameClass[index].deliverydate.toLocaleString()
        }
+
+       console.log(`tasks in same class ${tasksInSameClass}`)
 
         
         

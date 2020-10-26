@@ -105,7 +105,7 @@ tasksRouter.get('/', function (request, response) { return __awaiter(void 0, voi
         switch (_a.label) {
             case 0:
                 student_id = request.student.id;
-                console.log(student_id);
+                console.log("student_id router " + student_id);
                 _a.label = 1;
             case 1:
                 _a.trys.push([1, 3, , 4]);
@@ -113,9 +113,12 @@ tasksRouter.get('/', function (request, response) { return __awaiter(void 0, voi
                 return [4 /*yield*/, listTasks.execute({ student_id: student_id })];
             case 2:
                 tasks = _a.sent();
+                console.log("tasks router  " + tasks);
                 return [2 /*return*/, response.json(tasks)];
             case 3:
                 error_3 = _a.sent();
+                console.log("error " + error_3);
+                console.log("error.message " + error_3.message);
                 return [2 /*return*/, response.status(400).json({ Error: error_3.message })];
             case 4: return [2 /*return*/];
         }

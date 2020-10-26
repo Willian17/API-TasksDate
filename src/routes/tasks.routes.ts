@@ -54,15 +54,19 @@ tasksRouter.post('/', async (request, response) => {
 tasksRouter.get('/', async (request, response) =>{
   const student_id = request.student.id
 
-  console.log(student_id)
+  console.log(`student_id router ${student_id}`)
   
   try {
     const listTasks = new ListTasksService()
     
     const tasks = await listTasks.execute({student_id})
+
+    console.log(`tasks router  ${tasks}`)
     
     return response.json(tasks)
   } catch (error) {
+    console.log(`error ${error}`)
+    console.log(`error.message ${error.message}`)
     return response.status(400).json({ Error: error.message });
   }
   
