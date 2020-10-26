@@ -8,9 +8,8 @@ import 'express-async-errors';
 import routes from './routes';
 import AppError from './errors/AppError';
 
-import createConnection from './database';
+import './database';
 
-createConnection();
 const app = express();
 app.use(cors({origin: process.env.FRONTEND_URL}))
 
