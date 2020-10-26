@@ -105,6 +105,7 @@ tasksRouter.get('/', function (request, response) { return __awaiter(void 0, voi
         switch (_a.label) {
             case 0:
                 student_id = request.student.id;
+                console.log(student_id);
                 _a.label = 1;
             case 1:
                 _a.trys.push([1, 3, , 4]);

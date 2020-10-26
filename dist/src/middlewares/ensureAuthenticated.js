@@ -7,6 +7,7 @@ var jsonwebtoken_1 = require("jsonwebtoken");
 var AppError_1 = __importDefault(require("../errors/AppError"));
 function ensureAuthenticated(request, response, next) {
     var authHeader = request.headers.authorization;
+    console.log(authHeader);
     if (!authHeader) {
         throw new AppError_1.default('JWT token is missing', 401);
     }
