@@ -53,6 +53,8 @@ tasksRouter.post('/', async (request, response) => {
 
 tasksRouter.get('/', async (request, response) =>{
   const student_id = request.student.id
+
+  console.log(student_id)
   
   try {
     const listTasks = new ListTasksService()
