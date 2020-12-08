@@ -25,7 +25,9 @@ studentsRouter.post('/signup', async(request, response) => {
         
         return response.status(201).send()
     } catch (error) {
+        console.log(error.message)
         return response.status(400).send(error.message);
+
     }
 })
 
