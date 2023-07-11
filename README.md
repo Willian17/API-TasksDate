@@ -32,7 +32,7 @@
 
   ## :rocket: Funcionalidades <a name="funcionalidades"></a>
 
-  - [x] Autenticação
+ - [x] Autenticação
  - [x] Agendar Atividade (Professor)
  - [x] Visualizar atividades
  - [x] Marcar atividade como concluida
@@ -42,7 +42,8 @@
   ## :construction_worker: Como executar <a name="executar"></a>
 
   ### Pré-requisitos
-  Ter o <a href="https://nodejs.org/en/">Node.js</a> instalado na maquina.
+  Ter o <a href="https://nodejs.org/en/">Node.js</a> instalado na maquina. <br/> <br/> 
+  Copiar o arquivo <a href="https://github.com/Willian17/API-TasksDate/blob/master/.env.example">.env.example</a> para .env com as variaveis do ambiente
   
   ### Clonar Repositório
   $ git clone https://github.com/Willian17/API-TasksDate.git
